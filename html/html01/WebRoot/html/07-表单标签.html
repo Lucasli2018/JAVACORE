@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- 
+		* 表单的标签
+			<form >
+				* form的属性
+					* action="表单的提交路径"
+						* http://www.baidu.com
+						* html页面
+					* method="提交方式（默认是get方式）"（面试题）
+						* form表单的提交方式有哪些？（get和post的区别）
+							* 答：form表单提交方式有很多，常用的有两种post和get
+								* post和get提交方式的区别：
+									* get方式会把参数列表显示在地址栏上，post方式不会（请求体）。
+									* get方式说明网站安全级别较低，post安全级别较高。
+									* get方式不支持大数据，post支持大数据。
+									
+							* 推荐大家使用post方式。
+				
+				* 用户输入的内容
+				<input type="类型" name="名称(必须要指定)" value="是否指定value属性" />
+					* name属性必须要指定，value可以看情况指定
+				
+				* type="text"			普通的文本框
+					* name必须指定
+					
+				* type="password"		密码框
+					* * name必须指定
+					
+				* type="radio"			单选按钮
+					* name必须指定	value必须指定
+					* name的属性，值要相同
+					* 默认值：checked=checked或者true
+					
+				* type="checkbox"		多选按钮
+					* name必须指定	value必须指定
+					* 默认值：checked=checked或者true
+					
+				* type="reset"			重置：恢复到最初的状态	
+				* type="submit" 		提交表单
+					* 点击提交后，地址栏发生了变化（?sex=on）
+					* 在普通的文本框上添加name属性 name="username"之后，点击提交，地址栏发生了变化（?username=haha&sex=on）
+						String str = "?username=haha&sex=on";
+					* ?username=zhangsan&password=123&sex=nan&love=zq	
+						
+				* type="file"			选择文件		
+					* name属性指定
+				* type="hidden"			隐藏组件
+					* name指定 value指定	
+					
+				* type="button"			按钮
+					* value="显示的文字"
+					* 和js（javascript）	绑定事件
+				
+				* type="image"			图片
+					* 提交	引入外部的一个文件（图片）
+				
+				* 声明选择框	
+					<select name="city">
+						<option value="bj"></option>
+						<option value="sh"></option>
+					</select>	
+					
+				* <textarea>文本域
+					* rows="行"
+					* clos="列"	
+					* name属性指定
+					* selected="selected"	代表默认值
+				
+			</form>
+	-->
+	
+	<form action="success.html" method="post">
+		输入姓名：<input type="text" name="username" /><br/>
+		输入密码：<input type="password" name="password"  /><br/>
+		选择性别：<input type="radio" name="sex" value="nan"/>男
+				<input type="radio"  name="sex" checked="checked" value="nv"/>女<br/>
+				
+		选择爱好：<input type="checkbox" checked="checked" name="love" value="lq"/>	篮球
+				<input type="checkbox"  name="love" value="zq"/>足球
+				<input type="checkbox"  name="love" value="pq"/>排球
+				<input type="checkbox"  name="love" value="bq"/>冰球<br/>
+		上传附件：<input type="file" name="myfile" /><br/>
+		隐藏组件：<input type="hidden" name="userId" value="001" /><br/>
+		
+		选择城市：<select name="city">
+					<option value="none">--请选择--</option>
+					<option value="bj" selected="selected">北京</option>
+					<option value="sh">上海</option>
+					<option value="sz">深圳</option>
+				</select>
+				<br/>
+		
+		个人简介：<textarea rows="10" cols="10" name="desc"></textarea><br/>
+			
+		<input type="reset" value="重置数据"/>
+		<input type="submit" value="提交数据"/>		
+		<input type="button" value="我是按钮"/>
+		<input type="image" src="../imgs/tj.png" />
+				
+	</form>
+	
+	
+</body>
+</html>

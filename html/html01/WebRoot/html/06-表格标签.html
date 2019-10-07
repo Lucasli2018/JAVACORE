@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- 
+		* 表格标签
+			<table>
+				<caption>用户列表</caption>
+				<tr>
+					<th>数据</th>
+					<th>数据</th>
+				</tr>
+				<tr>
+					<td>数据</td>
+					<td>数据</td>
+				</tr>
+			</table>
+			
+			table的属性
+				* border:	边框
+				* width:	宽度
+				* height:	高度
+				
+			tr的属性
+				* align:中间的文字的对齐方式	
+				
+			td获取th
+				区别：th中间的内容粗体显示。
+					th中间的内容默认居中。
+					th一般用来表格的表头
+					
+				td的属性
+					* width		宽度
+					* height	高度
+					* 合并单元格（值的写法：合并几个单元格，值就写几）
+						* 行合并	rowspan=""
+						* 列合并	colspan=""
+						
+			* <caption></caption>必须要写在table的中间
+				
+	-->
+	
+	<table border="1" width="50%" bgcolor="gray" bordercolor="red">
+		<caption>用户列表</caption>
+		<tr>
+			<th>序号</th>
+			<th>姓名</th>
+			<th>性别</th>
+		</tr>
+		<tr align="center">
+			<td>1</td>
+			<td>张三</td>
+			<td>男</td>
+		</tr>
+		<tr align="center">
+			<td>2</td>
+			<td>赵四</td>
+			<td>女</td>
+		</tr>
+	</table>
+	
+	<h3>列合并单元格</h3>
+	<table border="1" width="50%">
+		<tr>
+			<th>序号</th>
+			<th>姓名</th>
+			<th>性别</th>
+			<th>爱好</th>
+		</tr>
+		<tr align="center">
+			<td>1</td>
+			<td>谢霆锋</td>
+			<td>男</td>
+			<td>王菲</td>
+		</tr>
+		<tr align="center">
+			<td>2</td>
+			<td>王菲</td>
+			<td>女</td>
+			<td>李亚鹏</td>
+		</tr>
+		<tr align="center">
+			<td>3</td>
+			<td>李亚鹏</td>
+			<td>男</td>
+			<td>张柏芝</td>
+		</tr>
+		<tr align="center">
+			<td>4</td>
+			<td>张柏芝</td>
+			<td>女</td>
+			<td>谢霆锋</td>
+		</tr>
+		<tr align="center">
+			<td colspan="4">
+				统计：一个有<font color="red" size="5">4</font>个人
+			</td>
+		</tr>
+	</table>
+	
+	<h3>行合并单元格</h3>
+	<table border="1" width="50%">
+		<tr>
+			<td rowspan="3">
+				<img src="../imgs/bx.jpg" width="100px" height="150px">
+			</td>
+			<td>
+				商品信息：冰箱
+			</td>
+		</tr>
+		<tr>
+			<td>
+				商品价格：998元
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="success.html"><img src="../imgs/gwc.png"></a>
+			</td>
+		</tr>
+	</table>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
