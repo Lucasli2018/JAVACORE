@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+	
+	<style type="text/css">
+		/* 
+			* CSS的选择器
+				* 扩展选择器
+					* 关联选择器：标签可以嵌套，标签与标签之间的关系。
+						* 写法：	中间用空格隔开	例子（div font{CSS的代码}）
+						
+					* 组合选择器：对多个不同的选择器进行相同的样式
+						* 写法：在多个不同的选择器之间用 ,	隔开
+						
+					* 伪元素选择器：	定义好的一些选择器，用就ok。
+						* 如果使用超链接伪元素选择器：使用顺序：	L V H A
+						
+		div font{
+			font-size: 25px;
+			color: red;
+		}
+		
+		
+		.hehe,#haha{
+			color: red;
+		}
+		*/
+		
+		input:FOCUS {
+			background-color: gray;
+		}
+		
+		/* 未访问 */
+		a:LINK {
+			text-decoration: none;
+			color: blue;
+		}
+		
+		/* 访问完成 */
+		a:VISITED {
+			color: yellow;
+			font-size: 20px;
+		}
+		
+		/* 悬停 */
+		a:HOVER {
+			color: red;
+			font-size: 25px;
+		}
+		
+		/* 点击状态 */
+		a:ACTIVE {
+			color: green;
+			font-size: 35px;
+		}
+		
+	</style>
+
+</head>
+<body>
+	
+	<a href="http://www.youku.com">优酷</a>
+	
+	<hr/>
+	
+	<input type="text" />
+	
+	<div>这是div的<font>区域1</font></div>
+	<div id="haha">这是div的区域2</div>
+	<span class="hehe">这是span的<font>区域1</font></span>
+	<span id="haha2">这是span的区域2</span>
+	<p class="hehe">这是p的区域1</p>
+	<p>这是p的区域2</p>
+	
+</body>
+</html>
+
+
+
+
+
+
+

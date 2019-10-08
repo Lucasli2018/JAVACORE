@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+	
+	<style type="text/css">
+		/* 
+			* CSS的选择器
+				* 告诉CSS的代码作用在哪个标签上。
+					* 基本选择器
+						* 标签名选择器		div{}	span{}
+						* 类选择器：在HTML的标签上，提供了属性	class，定位到div的标签（美工经常使用的方式）
+							* 写法：	.class的名称	(.hehe{CSS的代码})
+							* 设置不同的标签，具有相同的样式
+							
+						* ID选择器
+							* 在HTML的标签上，提供的属性 设置样式
+								* 写法：	#id的名称	(#haha{CSS的代码})
+							* 一般情况下：设置不同的ID
+								* 一般情况下给js语言来使用。
+								
+						* 优先级：（特殊情况下）
+							* 标签名选择器 < 类选择器 < ID选择器 < style属性	
+							
+							
+					* 扩展选择器
+						* 
+		
+		div{
+			color: red;
+		}
+		
+		.hehe{
+			font-size: 25px;
+			color: fuchsia;
+		}
+		*/
+		
+		#haha{
+			color: blue;
+		}
+		div{
+			color: red;
+		}
+		
+	</style>
+
+</head>
+<body>
+	
+	<div>这是div的区域1</div>
+	<div id="haha">这是div的区域2</div>
+	<span class="hehe">这是span的区域1</span>
+	<span id="haha2">这是span的区域2</span>
+	<p class="hehe">这是p的区域1</p>
+	<p>这是p的区域2</p>
+	
+</body>
+</html>
+
+
+
+
+
+
+

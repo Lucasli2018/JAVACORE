@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+	
+	<link rel="stylesheet" type="text/css" href="zong.css" >
+	
+	<!-- 第二种结合方式 -->
+	<style type="text/css">
+		/* div{
+			background-color:fuchsia;
+			color: yellow;
+		} 
+		
+		@IMPORT url("div.css");
+		@import url("span.css");
+		
+		@IMPORT url("zong.css");
+		*/
+		
+	</style>
+	
+</head>
+<body>
+	<!--
+		CSS的注释	/* */
+		 
+		* CSS与HTML的结合方式（4种）
+			* 在html的标签上，提供了一个(属性)，style="CSS的代码"
+			* 在HTML的文件，提供了一个(标签)	<style type="text/css">CSS的代码</style>，这个标签放在<head></head>的中间
+			
+			* 引入外部的文件的方式（引入CSS的文件，定义一个css文件（后缀名名  demo.css））（经常使用的方式）
+				* @import url("CSS文件的地址");	 属性必须要写<style></style>内部。大写和小写都没有问题。（注意：必须有;）
+				
+			* 引入外部文件的方式，通过一个<link>		写在<head></head>中间， 不要放在<style>中间（经常使用）
+				* rel：代表当前和引入文件之间的关系
+				* type：
+				* href：引入CSS文件的地址
+	-->
+	
+	<div>这是div的区域1</div>
+	<div>这是div的区域2</div>
+	<span>这是span的区域1</span>
+	<span>这是span的区域2</span>
+	<p>这是p的区域1</p>
+	<p>这是p的区域2</p>
+	
+</body>
+</html>
+
+
+
+
+
+
+
