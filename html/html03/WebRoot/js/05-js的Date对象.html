@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="out.js"></script>
+</head>
+<body>
+	
+</body>
+	<script type="text/javascript">
+		/* 
+			* Date日期对象
+				var date = new Date();	当前的日期
+				
+				* toLocaleString()	转换本地的日期格式
+				* toLocaleDateString()	只包含日期
+				* toLocaleTimeString()	只包含时间
+				
+				* getDate()			返回一个月中的某一天（1-31）
+				* getDay()			返回一周中的某一天(0-6)
+				* getMonth()		返回月份（0-11）	+1
+				* getFullYear()		返回年份
+				
+				* getTime()			返回毫秒数
+				* setTime()			通过毫秒数获取日期
+					* var date3 = new Date(1415937050973);
+				
+				* parse(str)		解析字符串，返回毫秒数
+					Date.parse(str);
+					
+					str：	
+						2014-11-14	解析不了
+						
+						11/14/2014	可以解析
+						2014,11,14	可以解析
+		*/
+		
+		var date = new Date();
+		/* // println(date);
+		
+		println(date.toLocaleString());
+		println(date.toLocaleDateString());
+		println(date.toLocaleTimeString());
+		 */
+		
+		// 获取年份
+		var year = date.getFullYear(); 
+		// 获取月份
+		var month = date.getMonth()+1;	
+		// 获取一月中的某一天
+		var monthDay = date.getDate();
+		// 获取星期几
+		var weekDay = date.getDay();
+		
+		println(year+"-"+month+"-"+monthDay+" "+getWeekDay(weekDay));
+		
+		function getWeekDay(num){
+			var arr = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+			return arr[num];
+		}
+		
+		
+		// 1415937050973
+		// println(date.getTime());
+		
+		// 获取毫秒对应的时间
+		/* var date2 = new Date();
+		date2.setTime(1415937050973);
+		println(date2.toLocaleString());
+		
+		var date3 = new Date(1415937050973);
+		println(date3.toLocaleString()); */
+		
+		var m = Date.parse("2014,11,14");
+		println(m);
+		var date4 = new Date(m);
+		println(date4.toLocaleString());
+		
+	</script>
+</html>
+
+
+
+
+
+
+
+
+

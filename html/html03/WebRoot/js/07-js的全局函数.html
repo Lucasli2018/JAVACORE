@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="out.js"></script>
+</head>
+<body>
+	
+	<form>
+		<input type="text" />
+	</form>
+	
+	<a href="/day03/demo?username=张三&password=123"></a>
+	
+</body>
+	<script type="text/javascript">
+		/* 
+			* 全局函数
+				* eval()		可以解析字符串，执行字符串中间的js代码
+				* isNaN()		判断是否是非数字值
+				* parseInt()	解析字符串，返回整数
+				
+				* encodeURI()	进行编码
+				* decodeURI()	解析解码
+				
+				* encodeURIComponent()
+				* decodeURIComponent()
+				
+				* escape()
+				* unescape()
+		*/
+		
+		var str = "alert('hehe')";
+		// alert(str);
+		// eval(str);
+		
+		// alert(isNaN("abc" - 1));	// 
+		
+		var str2 = "abc张三";
+		var str3 = encodeURI(str2);
+		println(str3);
+		
+		var str4 = decodeURI(str3);
+		println(str4);
+		
+	</script>
+</html>

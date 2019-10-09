@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<input type="button" value="删除" onclick="del()"/> <br/>
+	
+	<input type="button" value="移动" onclick="run1()"/> <br/>
+	
+	<input type="button" value="定时" onclick="run2()"/> <br/>
+	
+	<input type="button" value="停" onclick="run4()"/> <br/>
+	
+	<input type="button" value="新窗口" onclick="run5()"/> <br/>
+	
+	<input type="text" id="nameId" name="username" value="zhangsan" />
+	
+</body>
+	<script type="text/javascript">
+		/* 	
+			* alert()		弹出提示框
+			* confirm("参数")		询问框
+				* 提供俩按钮，确定和取消
+				* 如果点击是确定，返回true，如果点击取消，返回false
+				
+			* moveBy()			移动浏览器
+				
+			* setInterval("函数",毫秒值)		定时相关的
+				* 每隔毫秒值执行一次函数
+				* 返回唯一的id值
+				
+			* setTimeout("函数",毫秒值)		
+				* 到了毫秒值后执行一次函数
+				* 返回唯一的id值
+				
+			* 清除定时
+				clearInterval(id的值)		
+				clearTimeout()
+				
+			* close()	关闭浏览器的窗口
+			* open()	打开浏览器窗口
+			
+			* 属性：
+				* opener 返回对创建此窗口的窗口的引用。 
+				* win  open()	弹出baidu的窗口
+					
+					在baidu窗口中  baidu.opener	得到了win的引用。
+					
+			* document对象方法
+				* document.getElementById("nameId"); 获取到是input标签的对象
+				
+		*/
+		
+		function del(){
+			if(window.confirm("确定删除吗??")){
+				// 点击确定，执行
+				// 删除数据 ajax
+				alert("删除成功");
+			}else{
+				// 点击取消
+				alert("咋这么不小心呢");
+			}
+		}
+		
+		function run1(){
+			window.moveBy(20, 20);
+		}
+		
+		var m;		
+		function run2(){
+			m = window.setInterval("run3()", 3000);
+			alert(m);
+			// window.setTimeout("run3()", 3000);
+		}
+		
+		function run3(){
+			alert("hehe");
+		}
+		
+		function run4(){
+			window.clearInterval(m);
+		}
+		
+		function run5(){
+			window.open("http://www.baidu.com", "", "width=400,height=200");
+		}
+		
+		var input = document.getElementById("nameId");
+		// alert(input.value);
+		input.value = "zhaosi";
+		
+	</script>
+</html>

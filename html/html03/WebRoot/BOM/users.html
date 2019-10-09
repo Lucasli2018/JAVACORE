@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<table border="1" width="90%">
+		<tr>
+			<th>操作</th>
+			<th>编号</th>
+			<th>姓名</th>
+		</tr>
+		<tr align="center">
+			<td>
+				<input type="button" value="选择" onclick="run('001','张三')"/>
+			</td>
+			<td>001</td>
+			<td>张三</td>
+		</tr>
+		<tr align="center">
+			<td>
+				<input type="button" value="选择" onclick="run('002','赵四')"/>
+			</td>
+			<td>002</td>
+			<td>赵四</td>
+		</tr>
+		<tr align="center">
+			<td>
+				<input type="button" value="选择" onclick="run('007','邦德')"/>
+			</td>
+			<td>007</td>
+			<td>邦德</td>
+		</tr>
+	</table>
+	
+</body>
+	<script type="text/javascript">
+		/* 
+			点击按钮，获取编号的姓名的值
+			把值赋值给windows的窗口中的文本框
+			关闭窗口
+		*/
+		function run(num,name){
+			// alert(num+" : "+name);
+			// window(代表是users的窗口的对)
+			var windows = window.opener;
+			windows.document.getElementById("numId").value = num;
+			windows.document.getElementById("nameId").value = name;
+			window.close();
+		}
+		
+	</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

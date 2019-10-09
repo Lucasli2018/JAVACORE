@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<input type="button" value="浏览器信息" onclick="run()"/><br/>
+	
+	<input type="button" value="上一页" onclick="run2()"/>
+	<input type="button" value="下一页" onclick="run3()"/><br/>
+	
+	<input type="button" value="链接" onclick="run4()"/><br/>
+	
+</body>
+	<script type="text/javascript">
+		/* 
+			Window  		窗口对象（*****）
+			Navigator 		和浏览器版本相关的对象（**）
+				* userAgent	获取浏览器的相关的信息
+				* window.navigator.userAgent	window可以省略不写
+			
+			Screen 			和屏幕相关的对象（-*）
+			
+			History 		和浏览器历史相关（**）
+				* back()		返回上一个页面
+				* forward()		去下一个页面
+				
+				* go()
+					* 传参数	go(1)	等于forward()	
+							go(-1)	等于back()
+					
+			Location 		和浏览器地址相关的对象（***）
+				* href	获取和设置浏览器的路径（***）
+				
+			* 事件
+				* onclick	点击事件
+				* 值的写法：
+		*/
+		// 函数
+		function run(){
+			// alert("hehe");
+			alert(window.navigator.userAgent);
+		}
+		
+		// 返回上一页
+		function run2(){
+			// window.history.back();
+			history.go(-1);
+		}
+		// 下一页
+		function run3(){
+			// window.history.forward();
+			history.go(1);
+		}
+		
+		function run4(){
+			// alert(location.href);
+			// location.href = "http://www.baidu.com";
+			alert(location.protocol);
+		}
+		
+	</script>
+</html>
