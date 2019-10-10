@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- 
+	* 引入W3C名称空间，我是实例文档。
+		* xmlns="http://www.w3.org/2001/XMLSchema-instance"
+	* 引入自己编写的schema的文档
+		* xmlns="http://www.itcast.cn/1110"
+	* 问题：元素上不能有相同的属性名称
+		* 解决：起别名		:aa
+		* 技巧：在下面出现标签的概率小起别名
+	* 引入自己编写的schema文档的地址
+		* schemaLocation属性是W3C提供的，如果W3C名称空间要是有别名的话，先把别名写上。
+			xsi:schemaLocation="名称空间   schema文件的地址"
+ -->
+
+<书架 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xmlns="http://www.itcast.cn/1110"
+		xsi:schemaLocation="http://www.itcast.cn/1110 book.xsd"
+	>
+	<书 出版社="清华出版社">
+		<书名>javaweb开发大全</书名>
+		<作者>班长</作者>
+		<售价>99.8</售价>
+		<简介>这是不错啊</简介>
+	</书>
+</书架>
