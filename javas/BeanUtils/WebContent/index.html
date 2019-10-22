@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>hello beanUtils</h1>
+<form method="post" action="/BeanUtils/BeanUtilsServlet">
+	<table>
+		<tr>
+			<td>姓名</td>
+			<td><input type="text" name="name"></td>
+		</tr>
+		<tr>
+			<td>年龄</td>
+			<td><input type="text" name="age"></td>
+		</tr>
+		<tr>
+			<td>工资</td>
+			<td><input type="text" name="salary"></td>
+		</tr>
+		<tr>
+			<td>生日</td>
+			<td><input type="date" name="birthday"></td>
+		</tr>
+		<tr>
+			<td>城市</td>
+			<td>
+				<select name="city">
+					<option value="北京">北京</option>
+					<option value="上海">上海</option>
+					<option value="广州">广州</option>
+					<option value="深圳">深圳</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">
+				<button type="reset">reset</button>
+				<button type="submit">submit</button>
+			</td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>
