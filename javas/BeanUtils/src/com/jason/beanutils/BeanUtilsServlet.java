@@ -30,7 +30,7 @@ public class BeanUtilsServlet extends HttpServlet {
 		Map<String, String[]> parameterMap = request.getParameterMap();
 		
 		// 在封装之前 注册转换器
-		ConvertUtils.register(new MyDateConverter(), Date.class);
+		//ConvertUtils.register(new MyDateConverter(), Date.class);
 		try {
 			BeanUtils.populate(person, parameterMap);
 			// 在封装 有一个类型自动转换

@@ -6,7 +6,7 @@ public class Person {
 	private String name;
 	private int age;
 	private double salary;
-	private Date birthday;
+	private String birthday;
 	private String city;
 	public String getName() {
 		return name;
@@ -26,8 +26,12 @@ public class Person {
 	public void setSalary(double salary) {
 		this.salary = salary;
 	}
-	public Date getBirthday() {
+	
+	public String getBirthday() {
 		return birthday;
+	}
+	public void setBirthday(String birthday) {
+		this.birthday = birthday;
 	}
 	public void setBirthday(Date birthday) {
 		birthday = birthday;
